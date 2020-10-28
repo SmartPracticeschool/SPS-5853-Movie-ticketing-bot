@@ -3,6 +3,12 @@ Movie ticketing bot
 
 Project Name: Name: Tejas's Movie Ticketing Bot (tejasmtbot)
 
+Technology
+
+UI: Nodered
+Backend: Watson Assistant
+Storage: Firebase (file storage)
+
 Developer
 Name: Tejas Patel
 Designation: Assistant Professor
