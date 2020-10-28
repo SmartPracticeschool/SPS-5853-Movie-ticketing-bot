@@ -23,3 +23,5 @@ This Bot is capable of doing following:
 4. Give visual representation of available seat and book desired seat.
 
 More functions and details are provided in Project Report.
+
+Note: I have added debug node as telegram sender and reciver since i was unable to remove my bot info from flow. Since it could be miss used to manipulate bot.
