@@ -1,0 +1,1610 @@
+{
+  "intents": [
+    {
+      "intent": "Booking",
+      "examples": [
+        {
+          "text": "Book Ticket"
+        },
+        {
+          "text": "Can you book a ticket ?"
+        },
+        {
+          "text": "I want to book ticket ."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Enquiry",
+      "examples": [
+        {
+          "text": "What are the available movies?"
+        },
+        {
+          "text": "What are the offers available ?"
+        },
+        {
+          "text": "What movies?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Trailer",
+      "examples": [
+        {
+          "text": "Show me trailers"
+        },
+        {
+          "text": "trailer"
+        },
+        {
+          "text": "trailers"
+        },
+        {
+          "text": "Which trailers are available"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "book",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "book ticket",
+          "synonyms": [
+            "book",
+            "book a ticket"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "bookinganswers",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": [
+            "Nope",
+            "No Thank you"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": [
+            "Sure",
+            "Ya",
+            "Yas"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "commands",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "/assumptions",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "/demolink",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "/developer",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "/help",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "/limitations",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "/reset",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "/whatcanyoudo",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "movies list",
+          "synonyms": [
+            "blockbusters",
+            "films",
+            "movies",
+            "movies available"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "bargains",
+            "deals",
+            "discount",
+            "discounts",
+            "offer"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternon",
+          "synonyms": [
+            "Afternoon",
+            "Ga",
+            "Gud Aftrn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "Evening",
+            "Ge",
+            "Gud Evng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "Gm",
+            "Gud Mrng",
+            "Morning",
+            "Mrng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "movies",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Black Widow",
+          "synonyms": [
+            "black widow",
+            "/bookblackwidow"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "KGF 2",
+          "synonyms": [
+            "/bookkgf2",
+            "kgf2",
+            "KGF Chapter 2"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Laxmi Bomb",
+          "synonyms": [
+            "/booklaxmmibomb",
+            "Laxmmi Bomb"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paytm",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Reset",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "reset everything",
+          "synonyms": [
+            "remove data",
+            "remove my past data",
+            "reset"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "start",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "/start",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "timeings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "01:30 pm to 04:00 pm",
+          "synonyms": [
+            "/afternoonshow",
+            "Afternoon Show"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "04:30 pm to 7:00 pm",
+          "synonyms": [
+            "/eveningshow",
+            "Evening Show"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "07:30 pm to 10:00 pm",
+          "synonyms": [
+            "/nightshow",
+            "Night Show"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "10:30 am to 01:00 pm",
+          "synonyms": [
+            "/morningshow",
+            "Morning Show"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "10:30 pm to 01:00 am",
+          "synonyms": [
+            "/latenightshow",
+            "Late Night Show"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "trailer",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "black widow trailer",
+          "synonyms": [
+            "/blackwidowtrailer",
+            "black widow trailer",
+            "trailer of black widow "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "kgf2 trailer",
+          "synonyms": [
+            "kgf 2",
+            "/kgf2trailer",
+            "kgf 2 trailer",
+            "kgf chapter 2",
+            "trailer of kgf chapter 2"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "laxmi bomb trailer",
+          "synonyms": [
+            "laxmmi bomb",
+            "/laxmmibombtrailer",
+            "laxmmi bomb trailer",
+            "trailer of laxmmi bomb"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1549878921517"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which movie would you like to see?\n\n/kgf2\n\n/laxmmibomb\n\n/blackwidow"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "How many tickets would you like to book?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1549878921517",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1549879039136",
+      "previous_sibling": "slot_14_1549879697779"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How would you like to pay for booking? We accept Card, UPI, and Paytm."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1603888094553",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1603888094569",
+      "previous_sibling": "handler_8_1603888094569"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide email address for future communication."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1603894169958",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1603894169978",
+      "previous_sibling": "handler_9_1603894169978"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_11_1549879039168",
+      "context": {
+        "book": "@movies"
+      },
+      "metadata": {},
+      "conditions": "@movies",
+      "event_name": "input",
+      "dialog_node": "handler_12_1549879039168"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Which movie would you like to see?\n\n/kgf2\n\n/laxmmibomb\n\n/blackwidow"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_11_1549879039168",
+      "event_name": "focus",
+      "dialog_node": "handler_13_1549879039168",
+      "previous_sibling": "handler_12_1549879039168"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_14_1549879697779",
+      "context": {
+        "numberofseats": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_15_1549879697779"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many would you like to book?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_14_1549879697779",
+      "event_name": "focus",
+      "dialog_node": "handler_16_1549879697779",
+      "previous_sibling": "handler_15_1549879697779"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Which show would you like to book on $date?\n\n/morningshow - 10:30 am to 01:00 pm\n\n/afternoonshow - 01:30 pm to 04:00 pm\n\n/eveningshow - 04:30 pm to 7:00 pm\n\n/nightshow - 07:30 pm to 10:00 pm\n\n/latenightshow - 10:30 pm to 01:00 am"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1603876050173",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1603876050173",
+      "previous_sibling": "handler_5_1603876050173"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1603875836419",
+      "context": {
+        "seat": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1603875836419"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1603875931357",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_3_1603875931367"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1603893331857",
+      "context": {
+        "book": "@movies"
+      },
+      "conditions": "@movies",
+      "event_name": "input",
+      "dialog_node": "handler_3_1603893331857"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Enter Seat Number as Number? For Ex. To Book seat in  3rd Row 1st Column, Type 31"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1603875836419",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1603875836419",
+      "previous_sibling": "handler_3_1603875836419"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please select the movie:\n\n/kgf2\n\n/laxmmibomb\n\n/blackwidow"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1603893331857",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1603893331857",
+      "previous_sibling": "handler_3_1603893331857"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1603876050173",
+      "context": {
+        "time": "@timeings"
+      },
+      "conditions": "@timeings",
+      "event_name": "input",
+      "dialog_node": "handler_5_1603876050173"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "On which day/date would you like to book ticket for?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1603875931357",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1603875931367",
+      "previous_sibling": "handler_3_1603875931367"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1603894491214",
+      "context": {
+        "email": "@email"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_7_1603894491214"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please select the movie:\n\n/kgf2\n\n/laxmmibomb\n\n/blackwidow"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1603836445346",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1603836445354",
+      "previous_sibling": "handler_9_1603836445354"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1603888094553",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_8_1603888094569"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide email address for future communication."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1603894491214",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1603894491214",
+      "previous_sibling": "handler_7_1603894491214"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1603836445346",
+      "context": {
+        "book": "@movies"
+      },
+      "conditions": "@movies",
+      "event_name": "input",
+      "dialog_node": "handler_9_1603836445354"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1603894169958",
+      "context": {
+        "email": "@email"
+      },
+      "conditions": "@email",
+      "event_name": "input",
+      "dialog_node": "handler_9_1603894169978"
+    },
+    {
+      "type": "frame",
+      "title": "Payment",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your $numberofseats ticket on $date for $time show has been booked for $book Movie.\nThank you for booking ticket with us. Details of tickets will be mailed to you shortly on $email."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603875836418",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@payment",
+      "dialog_node": "node_10_1603886384210"
+    },
+    {
+      "type": "standard",
+      "title": "Enquiry",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Enquiry || @enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_1_1549876201326",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "node_5_1603830369176"
+    },
+    {
+      "type": "frame",
+      "title": "Seat Selection",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$seat"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603875830656",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@sys-number",
+      "dialog_node": "node_1_1603875836418",
+      "previous_sibling": "slot_1_1603876050173"
+    },
+    {
+      "type": "frame",
+      "title": "Instant Book from Trailer/Movies List",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "May I know your email ID for further reference and booking?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@movies",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1603893331855",
+      "previous_sibling": "node_6_1603836397671"
+    },
+    {
+      "type": "standard",
+      "title": "EMAIL ID",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, Your Email Id  $email is registered for future reference. How may I help You?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "metadata": {},
+      "conditions": "@email",
+      "dialog_node": "node_20_1549880892862"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#Greetings || @greetings",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1549869380798",
+      "digress_out": "allow_all",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "movieslist"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1549876201326",
+      "metadata": {},
+      "conditions": "@enquiry:(movies list)",
+      "dialog_node": "node_2_1549876259982"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1549869380798",
+      "metadata": {},
+      "conditions": "@greetings:(Good Morning)",
+      "dialog_node": "node_3_1549869633540"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "1 Popcorn (Small) Free on Booking Couple Tickets (or Two Tickets) "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [
+              {
+                "text": "200 Rs. Voucher on Booking Family Tickets (4 or More)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1549876201326",
+      "metadata": {},
+      "conditions": "@enquiry:offers",
+      "dialog_node": "node_3_1549876920294",
+      "previous_sibling": "node_2_1549876259982"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_2_1549869380798",
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1549869837157",
+      "previous_sibling": "response_2_1603827988067"
+    },
+    {
+      "type": "standard",
+      "title": "Commands",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@commands",
+      "dialog_node": "node_4_1603895378284",
+      "previous_sibling": "node_2_1549869380798"
+    },
+    {
+      "type": "standard",
+      "title": "Trailer",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@trailer || #Trailer",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1603830369176",
+      "previous_sibling": "node_9_1603862884789"
+    },
+    {
+      "type": "frame",
+      "title": "Timings",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "seatmatrix"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1549878921517",
+      "conditions": "@sys-date",
+      "dialog_node": "node_5_1603875830656",
+      "previous_sibling": "response_3_1603892892384"
+    },
+    {
+      "type": "standard",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1549878921517"
+      },
+      "conditions": "@timeings",
+      "dialog_node": "node_5_1603892274948",
+      "previous_sibling": "node_1_1603893331855"
+    },
+    {
+      "type": "standard",
+      "title": "EMAIL ID Alternate",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, Your Email Id  $email is registered for future reference. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603893331855",
+      "context": {
+        "email": "@email.literal"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1549878921517"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_5_1603894491212",
+      "previous_sibling": "response_3_1603900037445"
+    },
+    {
+      "type": "frame",
+      "title": "Instant Book",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1549878921517"
+      },
+      "conditions": "@book && @movies",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1603836397671",
+      "previous_sibling": "node_1_1549876201326"
+    },
+    {
+      "type": "standard",
+      "title": "Delete Context",
+      "output": {
+        "deleted": "<?context.remove('email')?><?context.remove('book')?><?context.remove('numberofseats')?><?context.remove('payment')?><?context.remove('seat')?><?context.remove('time')?><?context.remove('date')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603886384210",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "dialog_node": "node_7_1603885669712",
+      "previous_sibling": "slot_3_1603888094553"
+    },
+    {
+      "type": "standard",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1549878921517"
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_8_1603892170825",
+      "previous_sibling": "node_9_1603892224401"
+    },
+    {
+      "type": "frame",
+      "title": "book",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Booking || @book || @movies",
+      "digress_in": "returns",
+      "dialog_node": "node_9_1549878921517",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_8_1603892170825",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "Reset",
+      "output": {
+        "deleted": "<?context.remove('email')?><?context.remove('book')?><?context.remove('numberofseats')?><?context.remove('payment')?><?context.remove('seat')?><?context.remove('time')?><?context.remove('date')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@Reset",
+      "dialog_node": "node_9_1603862884789",
+      "previous_sibling": "node_4_1603895378284"
+    },
+    {
+      "type": "standard",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_9_1549878921517"
+      },
+      "conditions": "@payment",
+      "dialog_node": "node_9_1603892224401",
+      "previous_sibling": "node_5_1603892274948"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, Movie not available in Tejas's Movie Theater. You can only watch trailer of available movies in Theater."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603830369176",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1603832170505",
+      "previous_sibling": "response_4_1603832077450"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This Bot is capable of doing following:\n\n1. Show Movie List available in Tejas's Movie Theater in Image Form (with question like Movie List, Available Movies).\n2. Show Trailer of Movies (You could ask for specific movie trailer of available movie or trailer list in your on words such as show kgf2 trailer).\n3. You could directly book movie from trailer or movie list image by tapping on particular movie command attached with image (No need to even type).\n4. It can handle traditional flow such as first asking list, then asking for trailer, then selecting movie and so on...\n5. It can handle direct flow such as \"book ticket kgf2\" directly after greetings or welcome message as long as that movie is available.\n6. It will store your email address regardless of through which flow you book ticket, even if you don't provide email in welcome message, it will ask for email when necessary (specially in direct flow where your first message is \"Book kgf2\" instead of greeting or welcome).\n7. It will ask/store which movie you want to book.\n8. It will ask/store no. of seats to be booked.\n9. It will show you offers.\n10. It can even identify offer and apply it when user doesn't know it. (For Example There is offer on booking 2 tickets and more then 4 tickets, in this situation user will be greeted with offer message when applicable).\n11. It will ask/store booking date and even understand relative days such as Tomorrow, Friday along with traditional dates.\n12. It will ask/store booking time (which show to book) and it is menu driven user don't even need to enter time, just select it (User can also enter time manually but should match show timings).\n\n13. [This feature is not available in existing systems] It will provide with available seats in visual form, you can view which sheets are booked and which are available. See /limitations for further info.\n\n14. It will also let you select desired seat from available seat. See /limitations for further info.\n15. It can also show you error message when you try to book seat which is already booked.\n16. It will also display your selected seat with different color, once you have selected the seat.\n17. Finally as a last step it will let you select payment method.\n18. Once Payment is done, It will show you summary of booking and confirmation message.\n19. At any point you can write words such as reset, remove data, remove my past data, erase data to clear all your data and start from beginning.\n20. It also greet you with various greetings and give appropriate response."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1603895378284",
+      "conditions": "@commands:(/whatcanyoudo)",
+      "dialog_node": "response_10_1603896256840",
+      "previous_sibling": "response_6_1603896221358"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Congratulations!!! You are eligible for Free Popcorn (Small) on Booking Couple Tickets (or Two Tickets)!!\nAsk ticket counter for popcorn upon arriving to the theator, and display coupon mailed to you.\n\nOn which day/date would you like to book ticket for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1549878921517",
+      "conditions": "@sys-number:2",
+      "dialog_node": "response_1_1603892667118",
+      "previous_sibling": "response_4_1603892415701"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1549869380798",
+      "conditions": "@greetings:(Good Evening)",
+      "dialog_node": "response_2_1603827988067",
+      "previous_sibling": "response_6_1603828022205"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "laxmmibombtrailer"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603830369176",
+      "conditions": "@trailer:(laxmi bomb trailer)",
+      "dialog_node": "response_2_1603831949061",
+      "previous_sibling": "response_4_1603830499668"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your $numberofseats ticket on $date for $timing show has been booked for $book Movie.\nThank you for booking ticket with us. Details of tickets will be mailed to you shortly on $email."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1603886384210",
+      "disabled": true,
+      "dialog_node": "response_2_1603889676677"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Assumptions are as follows:\n\n1. It is assumed that this bot is made for particular theater only, hence there is no asking of location and name of theater.\n2. Tickets price is also assumed to be standard and since i am not interacting with database or payment gateway.\n3. I didn't wanted to make bot more complicated (for user and for me) by introducing various level of tickets. \n4. Hence all tickets are same price, even their price is not mentioned, assuming user will verify it during payment gateway (if it existed)."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1603895378284",
+      "conditions": "@commands:(/assumptions)",
+      "dialog_node": "response_2_1603900713746",
+      "previous_sibling": "response_10_1603896256840"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "On which day/date would you like to book ticket for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1549878921517",
+      "conditions": "@sys-number",
+      "dialog_node": "response_3_1603892892384",
+      "previous_sibling": "response_1_1603892667118"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "May I know your email ID for further reference and booking?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603893331855",
+      "disabled": true,
+      "conditions": "@email:email",
+      "dialog_node": "response_3_1603900037445"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "blackwidowtrailer"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603830369176",
+      "conditions": "@trailer:(black widow trailer)",
+      "dialog_node": "response_4_1603830499668"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which movie's trailer you would like to see?\n\n/kgf2trailer\n\n/laxmmibombtrailer\n\n/blackwidowtrailer"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603830369176",
+      "conditions": "#Trailer",
+      "dialog_node": "response_4_1603832077450",
+      "previous_sibling": "response_6_1603832061265"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Congratulations!!! You are eligible for 200 Rs. Voucher on Booking Family Tickets (4 or More)!!\nVoucher will be mailed to you along with tickets.\n\nOn which day/date would you like to book ticket for?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1549878921517",
+      "conditions": "@sys-number > 3",
+      "dialog_node": "response_4_1603892415701"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Limitation are as follows:\n\n1. All the technology used in this project are new to me and hence, I could not implement database along with assistant and nodered.\n2. One major limitation which is apparent, is you can only select one seat, even if you booked 2 or more.\n(This is majorly due to state not being maintained due to absence of database).\n3. Payment gateway is also not implemented as this project was majorly about node red with watson assistant.\n4. Minor validations are not performed such as number of seats that can be booked could be 100 or 1000 even if theater has only 36 seats (Since there is no scope for data processing in watson assistant or at least I don't know)."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1603895378284",
+      "conditions": "@commands:(/limitations)",
+      "dialog_node": "response_4_1603902012832",
+      "previous_sibling": "response_2_1603900713746"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$seat"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1603875836418",
+      "disabled": true,
+      "conditions": "@sys-number",
+      "dialog_node": "response_5_1603875836419",
+      "previous_sibling": "slot_2_1603875836419"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Name: Tejas Patel\nQualification: M.E.(C.E.), B.E.(C.S.E)\nDesignation: Assistant Professor\nCollege: GIDC Degree Engineering College\nEmail: tejas.patel.2491@gmail.com"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1603895378284",
+      "conditions": "@commands:(/developer)",
+      "dialog_node": "response_5_1603896035596",
+      "previous_sibling": "response_7_1603895407950"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1549869380798",
+      "conditions": "@greetings:(Good Afternon)",
+      "dialog_node": "response_6_1603828022205",
+      "previous_sibling": "node_3_1549869633540"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "kgf2trailer"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603830369176",
+      "conditions": "@trailer:(kgf2 trailer)",
+      "dialog_node": "response_6_1603832061265",
+      "previous_sibling": "response_2_1603831949061"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Coming Soon!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1603895378284",
+      "conditions": "@commands:(/demolink)",
+      "dialog_node": "response_6_1603896221358",
+      "previous_sibling": "response_5_1603896035596"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Following commands shows details about Tejas's Movie Ticketing Bot (tejasmtbot)\n\n/developer - Will give information of developer\n\n/demolink - Will provide youtube link to demonstrate all the features\n\n/whatcanyoudo - Will list down all the features and capability of tejasmtbot\n\n/assumptions - Will provide list of project assumption \n\n/limitations - Will display limitation of this bot \n(If you are confused why certain things are missing, this would be the command for you)\n\n/reset - Will reset all data, meaning if you want to start over from beginning by removing data such as email, no.of seats etc...\n(By default it deletes all context data once ticket has been booked, so you can play diffrent scenario with bot)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1603895378284",
+      "conditions": "@commands:(/help)",
+      "dialog_node": "response_7_1603895407950"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1603836397671",
+      "variable": "$book",
+      "dialog_node": "slot_10_1603836445346"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1549878921517",
+      "metadata": {},
+      "variable": "$book",
+      "dialog_node": "slot_11_1549879039168",
+      "previous_sibling": "node_5_1603875830656"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1603875830656",
+      "variable": "$time",
+      "dialog_node": "slot_1_1603876050173",
+      "previous_sibling": "slot_3_1603875931357"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_9_1549878921517",
+      "variable": "$numberofseats",
+      "dialog_node": "slot_14_1549879697779",
+      "previous_sibling": "slot_11_1549879039168"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1603875836418",
+      "variable": "$seat",
+      "dialog_node": "slot_2_1603875836419",
+      "previous_sibling": "node_10_1603886384210"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1603893331855",
+      "variable": "$book",
+      "dialog_node": "slot_2_1603893331857",
+      "previous_sibling": "node_5_1603894491212"
+    },
+    {
+      "type": "slot",
+      "parent": "node_20_1549880892862",
+      "variable": "$email",
+      "dialog_node": "slot_2_1603894169958"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1603875830656",
+      "variable": "$date",
+      "dialog_node": "slot_3_1603875931357"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1603886384210",
+      "variable": "$payment",
+      "dialog_node": "slot_3_1603888094553",
+      "previous_sibling": "response_2_1603889676677"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1603894491212",
+      "variable": "$email",
+      "dialog_node": "slot_6_1603894491214"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, I am a Movie Ticketing Bot capable of booking tickets, provide you with movies listings, trailers,  display available seat matrix and book specific seat(s) at Tejas's Movie Theater. \n\nMay I know your email ID for further reference and booking?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome || @email || @start",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome",
+      "digress_out": "allow_all_never_return"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "name": "TEJASMT-Skill",
+  "language": "en",
+  "description": ""
+}
